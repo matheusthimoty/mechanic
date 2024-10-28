@@ -1,0 +1,1 @@
+console.log("Thimotyn ama me mamar");
