@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Estilo Geral */
 body {
   font-family: 'Poppins', Arial, sans-serif;
@@ -247,3 +248,254 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
+=======
+/* Estilo Geral */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #1a1a1a;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #e63946;
+}
+
+/* Seção Inicial */
+#home {
+  background-color: #333;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#home h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+#home h1 span {
+  color: #e63946;
+}
+
+#home p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+#home .btn {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#home .btn:hover {
+  background-color: #c71f30;
+}
+
+/* Seção Quem Somos */
+#about {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Seção Serviços */
+#services {
+  background-color: #f1f1f1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+#services .services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite ajustar em telas menores */
+}
+
+#services .service-item {
+  background-color: white;
+  padding: 20px;
+  width: 300px; /* Tamanho fixo para manter alinhamento */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#services .service-item h3 {
+  font-size: 1.5rem;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+#services .service-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Seção Contato */
+#contact {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contact p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #c71f30;
+}
+
+
+/* Seção Localização */
+#location {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#location h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#location p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  height: 450px;
+}
+
+
+
+/* Rodapé */
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+>>>>>>> 9f702a447cbe3fd1205435b320cd3e85270c0e92
