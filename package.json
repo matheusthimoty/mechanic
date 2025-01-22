@@ -1,0 +1,20 @@
+{
+  "name": "mechanic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusthimoty/mechanic.git"
+  },
+  "author": "Titi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusthimoty/mechanic/issues"
+  },
+  "homepage": "https://github.com/matheusthimoty/mechanic#readme",
+  "dependencies": {
+    "axios": "1.7.9"
+  }
+}
