@@ -1,32 +1,32 @@
 // 1. Rolagem suave para âncoras
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 });
 
 // 2. Efeito de Fade-In nas seções
-const fadeInElements = document.querySelectorAll('.fade-in');
+const fadeInElements = document.querySelectorAll(".fade-in");
 
 function checkVisibility() {
-  fadeInElements.forEach(el => {
+  fadeInElements.forEach((el) => {
     const rect = el.getBoundingClientRect();
     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-      el.classList.add('visible');
+      el.classList.add("visible");
     }
   });
 }
 
-window.addEventListener('scroll', checkVisibility);
+window.addEventListener("scroll", checkVisibility);
 checkVisibility(); // Verifica a visibilidade na carga da página
 
 // 3. Galeria com setas
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-const galleryContainer = document.querySelector('.gallery-container');
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+const galleryContainer = document.querySelector(".gallery-container");
 
 let currentIndex = 0;
 
@@ -39,7 +39,7 @@ function updateGallery() {
   galleryContainer.style.transform = `translateX(${offset}%)`;
 }
 
-prevButton.addEventListener('click', () => {
+prevButton.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
   } else {
@@ -48,7 +48,7 @@ prevButton.addEventListener('click', () => {
   updateGallery();
 });
 
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener("click", () => {
   if (currentIndex < galleryContainer.children.length - 1) {
     currentIndex++;
   } else {
@@ -72,8 +72,10 @@ window.addEventListener("scroll", () => {
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
-console.log("titi_branch >:)")
+console.log("titi_branch >:)");
+
+console.log("didi_branch >:(");
