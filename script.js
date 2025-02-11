@@ -1,3 +1,9 @@
+// Ativa/Desativa o menu hambúrguer
+document.getElementById('menuToggle').addEventListener('click', function() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');  // Alterna a classe 'active' para mostrar ou esconder o menu
+});
+
 // 1. Rolagem suave para âncoras
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
@@ -23,41 +29,7 @@ function checkVisibility() {
 window.addEventListener('scroll', checkVisibility);
 checkVisibility(); // Verifica a visibilidade na carga da página
 
-// 3. Galeria com setas
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-const galleryContainer = document.querySelector('.gallery-container');
-
-let currentIndex = 0;
-
-function updateGallery() {
-  const images = galleryContainer.children;
-  const totalImages = images.length;
-
-  // Move as imagens da galeria para exibir a próxima ou anterior
-  const offset = -currentIndex * 100;
-  galleryContainer.style.transform = `translateX(${offset}%)`;
-}
-
-prevButton.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = galleryContainer.children.length - 1;
-  }
-  updateGallery();
-});
-
-nextButton.addEventListener('click', () => {
-  if (currentIndex < galleryContainer.children.length - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0;
-  }
-  updateGallery();
-});
-
-// 6. Mostrar botão "Voltar ao topo" quando rolar para baixo
+// 3. Mostrar botão "Voltar ao topo" quando rolar para baixo
 const backToTopButton = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
@@ -68,7 +40,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// 6. Função de "Voltar ao Topo"
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
@@ -76,4 +47,3 @@ backToTopButton.addEventListener("click", () => {
   });
 });
 
-console.log("titi_branch >:)")

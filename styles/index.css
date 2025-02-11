@@ -5,12 +5,38 @@ body {
   padding: 0;
   background-color: #f7f7f7;
   color: #333;
+
+  @media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .content-section {
+    padding: 10px;
+  }
+}
 }
 
 /* Cabeçalho */
 header {
   display: flex;
-  background-color: #1a1a1a;
+  background-color: #000000;
   /* padding: 20px; */
   position: sticky;
   top: 0;
@@ -29,7 +55,7 @@ header .headerContainer {
 }
 
 header .logo img {
-  width: 50px;
+  width: 95px;
   margin: 10px;
   border-radius: 100px;
 }
