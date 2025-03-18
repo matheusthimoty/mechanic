@@ -1,12 +1,22 @@
-/* Typography */
-body {
-  font-family: 'Poppins', Arial, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografia */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
   background-color: #f7f7f7;
   color: #333;
   line-height: 1.6;
   font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  color: #222;
 }
 
 h1 {
@@ -19,14 +29,18 @@ h2 {
   font-size: 2rem;
   line-height: 1.3;
   margin-bottom: 1.25rem;
-  color: #222;
 }
 
 h3 {
   font-size: 1.5rem;
   line-height: 1.4;
   margin-bottom: 1rem;
-  color: #222;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
 }
 
 p {
@@ -34,38 +48,48 @@ p {
   line-height: 1.6;
   margin-bottom: 1.5rem;
   color: #444;
+  text-align:calc() 
 }
 
-/* Header */
+/* Cabeçalho */
 header {
-  display: flex;
   background-color: #000000;
   position: sticky;
   top: 0;
-  flex-direction: row;
-  z-index: 1;
+  z-index: 1000;
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header .headerContainer {
+.headerContainer {
   display: flex;
-  flex-direction: row;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid white;
-}
-
-header .logo img {
-  width: 95px;
-  margin: 10px;
-  border-radius: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
+}
+
+.logo img {
+  width: 95px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+#logoImage {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+#logoImage:hover {
+  color: #e63946;
 }
 
 #menu-toggle {
@@ -77,12 +101,12 @@ header .logo img {
   cursor: pointer;
 }
 
-header nav {
+nav {
   display: flex;
   align-items: center;
 }
 
-header nav a {
+nav a {
   color: white;
   text-decoration: none;
   margin: 0 15px;
@@ -90,7 +114,11 @@ header nav a {
   transition: color 0.3s;
 }
 
-/* Mobile Responsive Styles */
+nav a:hover {
+  color: #e63946;
+}
+
+/* Menu responsivo */
 @media screen and (max-width: 768px) {
   #menu-toggle {
     display: block;
@@ -117,31 +145,13 @@ header nav a {
   }
 }
 
-#logoImage {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-header nav a:hover {
-  color: #e63946;
-}
-
-/* Section spacing */
+/* Seções */
 section {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
+  text-align: center;
 }
 
-/* Container widths */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Home Section */
+/* Seção Inicial */
 #home {
   background-color: #333;
   color: white;
@@ -150,7 +160,6 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
 }
 
 #home h1 {
@@ -166,7 +175,7 @@ section {
   color: #eee;
 }
 
-#home .btn {
+.btn {
   background-color: #e63946;
   color: white;
   padding: 10px 20px;
@@ -176,71 +185,121 @@ section {
   transition: background-color 0.3s ease;
 }
 
-#home .btn:hover {
+.btn:hover {
   background-color: #c71f30;
 }
 
-/* About Section */
+/* Estilos para a seção inicial */
+#home h1 .welcome-text {
+  color: white; 
+}
+
+#home h1 .brand-name {
+  color: #e63946; 
+}
+
+/* Seção Quem Somos */
 #about {
   background-color: white;
-  padding: 4rem 1rem;
-  text-align: center;
 }
 
-#about h2 {
-  margin-bottom: 2rem;
-}
-
-#about p {
+#about .about-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Services Section */
-#services {
-  background-color: #f1f1f1;
-  padding: 4rem 1rem;
+/* Seção Equipe */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
   text-align: center;
 }
 
-#services h2 {
-  margin-bottom: 3rem;
+.team-member img {
+  width: 300px; 
+  height: 300px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+
+/* Seção Serviços */
+#services {
+  background-color: #f1f1f1;
 }
 
 .services-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-item {
+  flex: 0 1 calc(25% - 20px); /* 4 itens por linha */
+  max-width: calc(25% - 20px);
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .service-item:hover {
   transform: translateY(-5px);
 }
 
+.service-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
 .service-item h3 {
-  margin: 1.5rem 0 1rem;
+  margin: 1rem 0;
   color: #e63946;
+  font-size: 1.25rem;
 }
 
 .service-item p {
   font-size: 0.95rem;
   color: #555;
+  line-height: 1.6;
 }
 
-/* Testimonials Section */
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  .service-item {
+    flex: 0 1 calc(33.33% - 20px); 
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-item {
+    flex: 0 1 calc(50% - 20px); 
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-item {
+    flex: 0 1 100%; 
+    max-width: 100%;
+  }
+}
+
+/* Seção Testemunhos */
 #testimonials {
   background-color: #f8f9fa;
-  padding: 4rem 1rem;
-  text-align: center;
 }
 
 .testimonials-container {
@@ -255,7 +314,7 @@ section {
   background: white;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 350px;
   text-align: center;
   transition: transform 0.3s ease;
@@ -288,89 +347,47 @@ section {
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 768px) {
-  .rating i {
-    font-size: 1rem;
-  }
-}
-
-
 .testimonial p {
   color: #555;
   font-style: italic;
   line-height: 1.6;
 }
 
-/* Contact Section */
-#contact {
-  background-color: #ffffff;
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-#contact h2 {
-  margin-bottom: 2rem;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.form-group textarea {
-  min-height: 150px;
-}
-
-button[type="submit"] {
-  background-color: #e63946;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #c71f30;
-}
-
-/* Location Section */
+/* Seção Localização */
 #location {
   background-color: #ffffff;
-  padding: 4rem 1rem;
-  text-align: center;
 }
 
-#location h2 {
-  margin-bottom: 2rem;
+.location-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.location-info {
+  flex: 1 1 300px;
+  text-align: left;
 }
 
 .map-container {
-  margin: 2rem 0;
+  flex: 1 1 600px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+/* Rodapé */
 footer {
-  background-color: #1a1a1a;
+  background-color: black;
   color: white;
   text-align: center;
   padding: 2rem 0;
@@ -397,21 +414,114 @@ footer p {
   color: #e63946;
 }
 
-/* Responsive typography */
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+/* Botão "Voltar ao topo" */
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: #e63946;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+  background-color: #c71f30;
+}
+
+#back-to-top.show {
+  display: block;
+}
+
+/* Efeito Fade-In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação de entrada com fade e slide */
+@keyframes fadeInSlide {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  h2 {
-    font-size: 1.75rem;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  h3 {
-    font-size: 1.25rem;
-  }
-  
-  p {
-    font-size: 0.9rem;
-  }
+}
+
+.welcome-text, .brand-name {
+  animation: fadeInSlide 0.8s ease forwards;
+  opacity: 0; /* Começa invisível */
+}
+
+.welcome-text {
+  animation-delay: 0.5s; /* Atraso para o texto de boas-vindas */
+}
+
+.brand-name {
+  animation-delay: 1s; /* Atraso para o nome da marca */
+}
+
+.home-content p, .home-content .btn {
+  animation: fadeInSlide 0.8s ease forwards;
+  opacity: 0; /* Começa invisível */
+}
+
+.home-content p {
+  animation-delay: 1.5s; /* Atraso para o parágrafo */
+}
+
+.home-content .btn {
+  animation-delay: 2s; /* Atraso para o botão */
+}
+
+/* Estilo base do botão */
+.whatsapp-button {
+  display: inline-flex; /* Usando flexbox para alinhar ícone e texto */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 1.5rem; /* Espaçamento acima do botão */
+  padding: 0.75rem 1.5rem; /* Espaçamento interno */
+  background-color: #25d366; /* Verde do WhatsApp */
+  color: #fff; /* Cor do texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-weight: 600; /* Peso da fonte */
+  text-decoration: none; /* Remove sublinhado */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: all 0.3s ease; /* Transição suave para hover */
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-button:hover {
+  background-color: #128c7e; /* Verde mais escuro no hover */
+  transform: translateY(-2px); /* Levanta o botão levemente */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+}
+
+/* Efeito ao clicar */
+.whatsapp-button:active {
+  transform: translateY(0); /* Volta à posição original */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra normal */
+}
+
+/* Estilo do ícone do WhatsApp */
+.whatsapp-button i {
+  margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
+  font-size: 1.2rem; /* Tamanho do ícone */
 }
