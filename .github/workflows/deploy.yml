@@ -15,21 +15,17 @@ jobs:
       - name: Configurar Git
         run: git config --global user.name "matheusthimoty" && git config --global user.email "matheusthimoty@outlook.com"
 
-      - name: Instalar dependências
-        run: npm install  
-
-      - name: Build do projeto
-        run: echo "Este passo pode ser removido caso não tenha processo de build, pois seu projeto é puro HTML"
-
-      - name: Configurar branch gh-pages
+      - name: Criar/limpar branch gh-pages
         run: |
           git remote set-url origin https://github.com/matheusthimoty/mechanic
           git fetch
           git checkout --orphan gh-pages  # Cria uma nova branch sem histórico de commit
+          git rm -rf .  # Remove todos os arquivos da branch gh-pages para começar do zero
+          git commit -m "Limpeza da branch gh-pages"
 
       - name: Copiar arquivos para a branch gh-pages
         run: |
-          cp -r * .  # Copia todos os arquivos da branch main para a nova branch gh-pages
+          cp -r * .  # Copia todos os arquivos da branch main para a branch gh-pages
           git add .
           git commit -m "Deploy para GitHub Pages"
           git push origin gh-pages --force  # Push da nova branch gh-pages
