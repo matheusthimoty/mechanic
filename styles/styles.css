@@ -457,6 +457,30 @@ footer p {
 }
 
 
+/* Efeito de hover */
+#back-to-top:hover {
+  background-color: #d62839;
+  transform: scale(1.1);
+}
+
+/* Animação ao aparecer */
+#back-to-top.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 #back-to-top:hover {
   background-color: #c71f30;
 }

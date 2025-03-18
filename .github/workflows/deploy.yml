@@ -1,0 +1,23 @@
+name: Deploy HTML to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configurar Git
+        run: git config --global user.name "matheusthimoty" && git config --global user.email "matheusthimoty@outlook.com"
+
+      - name: Deploy para GitHub Pages
+        run: |
+          git add .
+          git commit -m "Deploy automático"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
