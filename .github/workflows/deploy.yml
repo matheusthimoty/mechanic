@@ -23,7 +23,7 @@ jobs:
 
       - name: Configurar branch gh-pages
         run: |
-          git remote set-url origin https://github.com/matheusthimoty/seu-repositorio.git
+          git remote set-url origin https://github.com/matheusthimoty/mechanic
           git fetch
           git checkout --orphan gh-pages  # Cria uma nova branch sem histórico de commit
 
