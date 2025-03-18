@@ -1,30 +1,30 @@
 // 1. Menu Sticky
-window.addEventListener("scroll", function() {
-  const header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 0);
+window.addEventListener("scroll", () => {
+  document.querySelector("header").classList.toggle("sticky", window.scrollY > 0);
 });
 
 // 2. Smooth scrolling for anchors
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
+  anchor.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
-    });
+    const target = document.querySelector(anchor.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
 
 // 3. Fade-In effect for sections
 const fadeInElements = document.querySelectorAll('.fade-in');
 
-function checkVisibility() {
+const checkVisibility = () => {
   fadeInElements.forEach(el => {
     const rect = el.getBoundingClientRect();
     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
       el.classList.add('visible');
     }
   });
-}
+};
 
 window.addEventListener('scroll', checkVisibility);
 checkVisibility();
@@ -34,25 +34,14 @@ const backToTopButton = document.getElementById("back-to-top");
 
 if (backToTopButton) {
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
-      backToTopButton.classList.add("show");
-    } else {
-      backToTopButton.classList.remove("show");
-    }
+    backToTopButton.classList.toggle("show", window.scrollY > 500);
   });
-}
 
-
-// 5. "Back to top" function
-if (backToTopButton) {
+  // 5. "Back to top" function
   backToTopButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
-
 
 // 6. Mobile menu toggle
 const menuToggle = document.getElementById('menu-toggle');
@@ -63,22 +52,16 @@ if (menuToggle && menu) {
     menu.classList.toggle('active');
     menuToggle.textContent = menu.classList.contains('active') ? '✕' : '☰';
   });
-}
 
-
-// Close menu when clicking outside
-if (menu && menuToggle) {
+  // Fechar menu ao clicar fora
   document.addEventListener('click', (e) => {
     if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
       menu.classList.remove('active');
       menuToggle.textContent = '☰';
     }
   });
-}
 
-
-// Close menu when clicking on a link
-if (menu && menuToggle) {
+  // Fechar menu ao clicar em um link
   menu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('active');
