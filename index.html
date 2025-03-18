@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brother Garage</title>
+  <meta name="description" content="Brother Garage - Serviços de mecânica automotiva de alta qualidade.">
+  <meta name="keywords" content="mecânica, serviços automotivos, manutenção de carros, Brother Garage">
+  <link rel="canonical" href="https://www.seusite.com/">
+  <title>Brother Garage Irajá</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/index.min.css">
-
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/png" href="./assets/logoBrotherGarage.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -24,7 +27,6 @@
           <a href="#about">Quem Somos</a>
           <a href="#services">Serviços</a>
           <a href="#testimonials">Testemunhos</a>
-          <a href="#contact">Contato</a>
           <a href="#location">Onde Estamos</a>
         </div>
       </nav>
@@ -34,138 +36,225 @@
   <!-- Seção Inicial -->
   <section id="home">
     <div class="home-content">
-      <h1>Bem-vindo à <span>Brother Garage</span></h1>
+      <h1>
+        <span class="welcome-text">Bem-vindo à</span> 
+        <span class="brand-name">Brother Garage</span>
+      </h1>
       <p>Seu carro em boas mãos. Oferecemos o melhor para o seu veículo!</p>
       <a href="#services" class="btn">Conheça nossos serviços</a>
     </div>
   </section>
-
   <!-- Seção Quem Somos -->
-  <section id="about">
+  <section class="fade-in" id="about">
     <h2>Quem Somos</h2>
     <div class="about-content">
-      <i class="fas fa-users fa-4x" style="color: #e63946;"></i>
       <p>Na Brother Garage, somos apaixonados por carros e comprometidos com a excelência em cada serviço que oferecemos. Nossa equipe altamente qualificada está pronta para cuidar do seu veículo.</p>
+    </div>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="./assets/rodrigo.jpg" alt="Emerson" loading="lazy">
+        <h3>Emerson</h3>
+      </div>
+      <div class="team-member">
+        <img src="./assets/leonardo.png" alt="Leonardo" loading="lazy">
+        <h3>Leonardo</h3>
+      </div>
     </div>
   </section>
 
   <!-- Seção Serviços -->
-  <section id="services">
+  <section class="fade-in" id="services">
     <h2>Nossos Serviços</h2>
     <div class="services-container">
+      <!-- Primeira linha de serviços -->
       <div class="service-item">
-        <i class="fas fa-car-side fa-3x" style="color: #e63946;"></i>
-        <h3>Suspensão</h3>
-        <p>Realizamos manutenção e reparo de sistemas de suspensão para garantir conforto e segurança.</p>
+        <img src="./assets/combustivel.jpg" alt="Sistema de Combustível" loading="lazy">
+        <h3>Sistema de Combustível</h3>
+        <p>Refil e substituição da bomba de combustível para garantir o desempenho ideal do motor.</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-cogs fa-3x" style="color: #e63946;"></i>
-        <h3>Rolamentos</h3>
-        <p>Substituição e manutenção de rolamentos para um desempenho suave e seguro.</p>
+        <img src="./assets/motor.png" alt="Arrefecimento do Motor" loading="lazy">
+        <h3>Arrefecimento do Motor</h3>
+        <p>Troca da bomba d'água, radiadores e demais componentes para manter o motor na temperatura ideal.</p>
       </div>
       <div class="service-item">
-        <i class="fas fa-tachometer-alt fa-3x" style="color: #e63946;"></i>
-        <h3>Freios</h3>
-        <p>Serviços de reparo e manutenção de freios para garantir sua segurança na estrada.</p>
+        <img src="./assets/freios.png" alt="Freios Seguros" loading="lazy">
+                <h3>Freios Seguros</h3>
+        <p>Troca de fluido de freio com máquina automática, além da substituição de lonas, cilindros, pastilhas e discos.</p>
+      </div>
+      <div class="service-item">
+        <img src="./assets/oleo.jpg" alt="Lubrificação e Vedação" loading="lazy">
+        <h3>Lubrificação e Vedação</h3>
+        <p>Troca de óleo do motor, filtro de óleo e reparo de pequenos vazamentos, como retentores.</p>
+      </div>
+
+      <!-- Segunda linha de serviços -->
+      <div class="service-item">
+        <img src="./assets/suspensao.jpg" alt="Sistema de Direção e Suspensão" loading="lazy">
+        <h3>Sistema de Direção e Suspensão</h3>
+        <p>Manutenção de buchas, balanças, terminais, axiais, bieletas, molas e pontas homocinéticas.</p>
+      </div>
+      <div class="service-item">
+        <img src="./assets/eixo.jpg" alt="Transmissão e Semi-Eixo" loading="lazy">
+        <h3>Transmissão e Semi-Eixo</h3>
+        <p>Inspeção e troca de semi-eixo e componentes relacionados para garantir tração eficiente.</p>
+      </div>
+      <div class="service-item">
+        <img src="./assets/rodagem.png" alt="Freios e Rodagem" loading="lazy">
+        <h3>Freios e Rodagem</h3>
+        <p>Manutenção completa de tambores, discos e cilindros mestres para uma frenagem segura.</p>
+      </div>
+      <div class="service-item">
+        <img src="./assets/prancheta.png" alt="Inspeção e Diagnóstico" loading="lazy">
+        <h3>Inspeção e Diagnóstico</h3>
+        <p>Avaliação detalhada para identificar e corrigir qualquer falha antes que se torne um problema maior.</p>
       </div>
     </div>
   </section>
 
   <!-- Seção Testemunhos -->
-  <section id="testimonials">
-    <h2>O que nossos clientes dizem</h2>
-    <div class="testimonials-container">
-      <div class="testimonial">
-        <img src="./assets/imgg4.jpg" alt="Cliente João Silva" loading="lazy">
-        <h3>Chappell Roan</h3>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p>"Excelente serviço! Minha suspensão estava com problemas e resolveram rapidamente. Recomendo!"</p>
-
-      </div>
-      <div class="testimonial">
-        <img src="./assets/imgg1.jpg" alt="Cliente Maria Oliveira" loading="lazy">
-        <h3>Sabrina Carpinter</h3>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p>"Atendimento de primeira qualidade. Meu carro está como novo depois da manutenção dos freios."</p>
-
-      </div>
-      <div class="testimonial">
-        <img src="./assets/img3.jpg" alt="Cliente Pedro Santos" loading="lazy">
-        <h3>Olivia Rodrigo</h3>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p>"Profissionais competentes e honestos. Fizeram um ótimo trabalho nos rolamentos do meu carro."</p>
-
-      </div>
-    </div>
+  <section class="fade-in" id="testimonials">
+    <h2>O que nossos clientes dizem</h2>    
+    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<div class="elfsight-app-1c7b86d5-06eb-40ce-a880-fd06574a1b12" data-elfsight-app-lazy></div>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
   </section>
 
-  <!-- Seção Contato -->
-  <section id="contact">
-    <h2>Entre em Contato</h2>
-    <p>Fale conosco para tirar dúvidas ou agendar seu serviço!</p>
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Nome</label>
-        <input type="text" id="name" placeholder="Digite seu nome" required>
-      </div>
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Telefone</label>
-        <input type="tel" id="phone" placeholder="Digite seu telefone">
-      </div>
-      <div class="form-group">
-        <label for="message">Mensagem</label>
-        <textarea id="message" placeholder="Digite sua mensagem" rows="5" required style="resize: vertical;"></textarea>
-      </div>
-      <button type="submit" class="btn">Enviar Mensagem</button>
-    </form>
-  </section>
+
 
   <!-- Seção Localização -->
-  <section id="location">
-    <h2>Onde Estamos</h2>
-    <p>Visite nossa oficina e cuide bem do seu carro!</p>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1877369.2692724883!2d-46.43209515255722!3d-23.216258690705672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997d88bd7cc9a9%3A0xc4b5755556176dfc!2sBrother%20Garage%20Auto%20Mecânica!5e0!3m2!1spt-BR!2sbr!4v1733253159705!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<section class="fade-in" id="location">
+  <h2>Onde Estamos</h2>
+  <div class="location-container">
+    <div class="location-info">
+      <h3>Mecânica Especializada</h3>
+      <p>Deixe seu carro nas mãos de profissionais qualificados e experientes, prontos para oferecer serviços rápidos e de confiança.</p>
+      <h4>Endereço</h4>
+      <p>R. Cetimã 14 - Irajá<br>Rio de Janeiro/RJ, CEP: 21.220-390</p>
+      <h4>Horário</h4>
+      <p>Seg. - Sex.<br>9h - 18h</p>
+      <!-- Botão Fale Conosco -->
+      <a href="https://wa.me/5521964152802" class="whatsapp-button" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i> Fale Conosco
+      </a>
     </div>
-    <a href="https://maps.google.com/?q=Brother+Garage" target="_blank" class="btn">Como chegar</a>
-  </section>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1877369.2692724883!2d-46.43209515255722!3d-23.216258690705672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997d88bd7cc9a9%3A0xc4b5755556176dfc!2sBrother%20Garage%20Auto%20Mecânica!5e0!3m2!1spt-BR!2sbr!4v1733253159705!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+  
 
   <!-- Rodapé -->
   <footer>
-    <p>© 2024 Brother Garage - Todos os direitos reservados.</p>
+    <p>© 2025 Brother Garage - Todos os direitos reservados.</p>
     <div class="social-links">
       <a href="https://instagram.com/brothergarageiraja" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
+        <i class="fab fa-instagram" aria-hidden="true"></i>
       </a>
       <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
       </a>
       <a href="https://wa.me/5521964152802" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
       </a>
     </div>
   </footer>
 
-  <script src="script.min.js"></script>
+  <!-- Botão Voltar ao Topo -->
+  <a href="#home" id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">↑</a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init('4QgcW9_9sq2Fm5XTW'); // Initialize with your EmailJS public key
+    })();
+
+    // 1. Menu Sticky
+    window.addEventListener("scroll", function() {
+      const header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    // 2. Smooth scrolling for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+
+    // 3. Fade-In effect for sections
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    function checkVisibility() {
+      fadeInElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+
+    // 4. Show "Back to top" button when scrolling down
+    const backToTopButton = document.getElementById("back-to-top");
+
+    if (backToTopButton) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+          backToTopButton.classList.add("show");
+        } else {
+          backToTopButton.classList.remove("show");
+        }
+      });
+    }
+
+    // 5. "Back to top" function
+    if (backToTopButton) {
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
+
+    // 6. Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        menuToggle.textContent = menu.classList.contains('active') ? '✕' : '☰';
+      });
+    }
+
+    // Close menu when clicking outside
+    if (menu && menuToggle) {
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+          menu.classList.remove('active');
+          menuToggle.textContent = '☰';
+        }
+      });
+    }
+
+    // Close menu when clicking on a link
+    if (menu && menuToggle) {
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('active');
+          menuToggle.textContent = '☰';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
