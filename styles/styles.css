@@ -421,16 +421,41 @@ footer p {
   bottom: 20px;
   right: 20px;
   z-index: 99;
-  font-size: 24px;
+  font-size: 20px;
   border: none;
   outline: none;
   background-color: #e63946;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
+
+/* Efeito de hover */
+#back-to-top:hover {
+  background-color: #d62839;
+  transform: scale(1.1);
+}
+
+/* Animação ao aparecer */
+#back-to-top.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 #back-to-top:hover {
   background-color: #c71f30;
